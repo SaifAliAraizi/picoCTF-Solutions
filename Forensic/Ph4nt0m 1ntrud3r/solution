@@ -1,0 +1,46 @@
+┌──(kali㉿kali)-[~/Desktop/picoCTF/Forensic/Ph4nt0m 1ntrud3r]
+└─$ tshark -r myNetworkTraffic.pcap -Y "tcp" -T fields -e tcp.segment_data | xxd -p -r | base64 -d
+�ZR�X�f160980:0aVņ�Qnt_th4t���npicoCTF/L
+_34sy_t��7*}F=  PD�(���[?N0\e�軔�/�{1t_w4s                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/Forensic/Ph4nt0m 1ntrud3r]
+└─$ tshark -r myNetworkTraffic.pcap -Y "tcp.len==12" -T fields -e tcp.segment_data | xxd -p -r | base64 -d
+bh_4r_ant_th4tpicoCTFf160980_34sy_t{1t_w4s                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/Forensic/Ph4nt0m 1ntrud3r]
+└─$ tshark -r myNetworkTraffic.pcap -Y "tcp.len==12 || tcp.len==4" -T fields -e frame.time -e tcp.segment_data | sort -k4 | awk '{print $6}' | xxd -p -r | base64 -d
+picoCTF{1t_w4snt_th4t_34sy_tbh_4r_af160980}            
+
+
+
+1-Ph4nt0m 1ntrud3r
+Description A digital ghost has breached my defenses, and my sensitive data has been stolen! 😱💻 Your mission is to uncover how this phantom intruder infiltrated my system and retrieve the hidden flag. To solve this challenge, you’ll need to analyze the provided PCAP file and track down the attack method. The attacker has cleverly concealed his moves in well timely manner. Dive into the network traffic, apply the right filters and show off your forensic prowess and unmask the digital intruder! Find the PCAP file here Network Traffic PCAP file and try to get the flag.
+
+The solution:
+
+The first thing i do is opening the file using wireshark then i see that we have a tcp packets , each packet have a tcp data encoding using base64, and i have notice that the packets is not ordered by the time for capturing.
+
+I decided to use tshark to get the tcp data from each packet.
+
+using this command :
+
+tshark -r myNetworkTraffic.pcap -Y "tcp" -T fields -e tcp.segment_data | xxd -p -r | base64 -d
+I got the data from all tcp packets but i don’t get the correct flag because some packets we don’t need it.
+
+using this command i filtered the tcp packets and got the data from the packets with length 12
+
+tshark -r myNetworkTraffic.pcap -Y "tcp.len==12" -T fields -e tcp.segment_data | xxd -p -r | base64 -d
+and i got the flag but not in the correct order then i decided to order the packets using the capture time .
+
+using this command :
+
+tshark -r myNetworkTraffic.pcap -Y "tcp.len==12 || tcp.len==4" -T fields -e frame.time -e tcp.segment_data | sort -k4 | awk '{print $6}' | xxd -p -r | base64 -d
+tshark: Network protocol analyzer (similar to Wireshark, but command-line based).
+-r myNetworkTraffic.pcap: Read packets from the myNetworkTraffic.pcap file.
+-Y "tcp.len==12 || tcp.len==4": Filter TCP packets with length 12 or 4 bytes.
+-T fields: Output the specific fields.
+-e frame.time: Display the timestamp of the frame.
+-e tcp.segment_data: Extract the TCP segment data (payload).
+**sort -k4:**Sorts the output based on the 4th field (typically the timestamp ).
+**awk '{print $6}':**Prints the 6th field from the sorted output, which is the actual segment data (TCP payload).
+**xxd -p -r:**Converts the data from a hex dump to binary (r reverses the hex dump), so the data is in its raw format.
+**base64 -d:**Decodes the raw data from Base64 format back into its original binary form.
+we got the correct flag.

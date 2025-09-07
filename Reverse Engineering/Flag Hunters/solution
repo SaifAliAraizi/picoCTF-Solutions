@@ -1,0 +1,60 @@
+The secret_intro is the verse that contains our flag:
+secret_intro = \
+'''Pico warriors rising, puzzles laid bare,
+Solving each challenge with precision and flair.
+With unity and skill, flags we deliver,
+The ether's ours to conquer, '''\
++ flag + '\n'
+In the code, we see that the secret_intro verse is added to the top of the song_flag_hunter.
+song_flag_hunters = secret_intro +\
+However, the reader starts reading from [VERSE1]:
+reader(song_flag_hunters, '[VERSE1]')
+We need to find a way to make the reader start from the very first line.
+Solution
+We know that the script takes user input, and this input isn’t sanitized:
+
+elif re.match(r"CROWD.*", line):
+        crowd = input('Crowd: ')
+        song_lines[lip] = 'Crowd: ' + crowd
+        lip += 1
+We also know that we can use the RETURN command to force the reader to read any specific line:
+
+elif re.match(r"RETURN [0-9]+", line):
+        lip = int(line.split()[1])
+Since we know that the verse containing our flag starts at the very beginning, we need to pass RETURN 0 to the script. However, if we do this, the script will simply echo RETURN 0 back to us, treating it as a string. To make sure the script interprets RETURN 0 as a command rather than a string, we need to adjust our input slightly.
+
+Instead of just using RETURN 0, we will use "some_string;RETURN 0"
+
+                                                                                                                                                               
+┌──(kali㉿kali)-[~/Desktop/picoCTF/Flag Hunters]
+└─$ nc verbal-sleep.picoctf.net 60855
+Command line wizards, we’re starting it right,
+Spawning shells in the terminal, hacking all night.
+Scripts and searches, grep through the void,
+Every keystroke, we're a cypher's envoy.
+Brute force the lock or craft that regex,
+Flag on the horizon, what challenge is next?
+
+We’re flag hunters in the ether, lighting up the grid,
+No puzzle too dark, no challenge too hid.
+With every exploit we trigger, every byte we decrypt,
+We’re chasing that victory, and we’ll never quit.
+Crowd: some_string;RETURN 0
+
+Echoes in memory, packets in trace,
+Digging through the remnants to uncover with haste.
+Hex and headers, carving out clues,
+Resurrect the hidden, it's forensics we choose.
+Disk dumps and packet dumps, follow the trail,
+Buried deep in the noise, but we will prevail.
+
+We’re flag hunters in the ether, lighting up the grid,
+No puzzle too dark, no challenge too hid.
+With every exploit we trigger, every byte we decrypt,
+We’re chasing that victory, and we’ll never quit.
+Crowd: some_string
+Pico warriors rising, puzzles laid bare,
+Solving each challenge with precision and flair.
+With unity and skill, flags we deliver,
+The ether’s ours to conquer, picoCTF{70637h3r_f0r3v3r_250bd6ef}
+

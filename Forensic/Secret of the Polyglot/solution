@@ -1,0 +1,12 @@
+The first thing I did when I saw this PDF was to open it in a Hex Editor. You can use any hex editor you want, but I used HexEd.it.
+
+Press enter or click to view image in full size
+
+HexEd.it view of flag2of2-final.pdf
+Immediately, we can see that the first few bytes say PNG, this is the PNG file header. This tells us that our PDF file is actually a PNG file. You can read more about PNG file headers here.
+
+So, when we rename this flag2of2-final.png, we get the first half of the flag: “ppicoCTF{f1u3n7_”.
+
+
+First half of the flag
+Combine this with the second half in the original pdf: “1n_pn9_&_pdf_7f9bccd1}, we get our full flag: ppicoCTF{f1u3n7_1n_pn9_&_pdf_7f9bccd1}

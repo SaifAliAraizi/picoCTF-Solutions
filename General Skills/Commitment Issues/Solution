@@ -1,0 +1,23 @@
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/…/picoCTF/General Skills/Commitment Issues/drop-in]
+└─$ ls
+message.txt
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/…/picoCTF/General Skills/Commitment Issues/drop-in]
+└─$ git log message.txt                                          
+commit 3899edb7f3110d613c72ad40083fd8feeef703d0 (HEAD -> master)
+Author: picoCTF <ops@picoctf.com>
+Date:   Sat Mar 9 21:09:58 2024 +0000
+
+    remove sensitive info
+
+commit 6603cb4ff0c4ea293798c03a32e0d78d5ab12ca2
+Author: picoCTF <ops@picoctf.com>
+Date:   Sat Mar 9 21:09:58 2024 +0000
+
+    create flag
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/…/picoCTF/General Skills/Commitment Issues/drop-in]
+└─$ git show 6603cb4ff0c4ea293798c03a32e0d78d5ab12ca2:message.txt
+
+picoCTF{s@n1t1z3_9539be6b}

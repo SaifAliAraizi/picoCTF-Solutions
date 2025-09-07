@@ -1,0 +1,28 @@
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Static ain't always noise]
+└─$ ls
+ltdis.sh  static
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Static ain't always noise]
+└─$ chmod +x static 
+                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Static ain't always noise]
+└─$ chmod +x ltdis.sh
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Static ain't always noise]
+└─$ ./ltdis.sh       
+Attempting disassembly of  ...
+objdump: 'a.out': No such file
+objdump: section '.text' mentioned in a -j option, but not found in any input file
+Disassembly failed!
+Usage: ltdis.sh <program-file>
+Bye!
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Static ain't always noise]
+└─$ ./static  
+Oh hai! Wait what? A flag? Yes, it's around here somewhere!
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Static ain't always noise]
+└─$ strings static | grep picoCTF
+
+picoCTF{d15a5m_t34s3r_ccb2b43e}

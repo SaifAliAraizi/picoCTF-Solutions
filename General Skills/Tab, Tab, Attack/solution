@@ -1,0 +1,23 @@
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Tab, Tab, Attack]
+└─$ ls                      
+Addadshashanammu  Addadshashanammu.zip
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Tab, Tab, Attack]
+8#TT 1tt$D���o�Nhanammu                                                                                                            
+�� ��0)@▒       (;▒�                                                                                                                                                                                                                                           /picoCTF/General Skills/Tab, Tab, Attack/Addadshashanammu]
+┌──(kali㉿kali)-[~/…/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku]
+└─$ file fang-of-haynekhtnamet
+
+fang-of-haynekhtnamet: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=47e898db922f38cb54ab4a08fb4e3def5a1cb6a1, not stripped
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/…/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku]
+└─$ chmod +x fang-of-haynekhtnamet
+
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/…/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku]
+└─$ ./fang-of-haynekhtnamet
+
+*ZAP!* picoCTF{l3v3l_up!_t4k3_4_r35t!_a00cae70}
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/…/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku]

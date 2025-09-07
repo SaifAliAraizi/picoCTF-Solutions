@@ -1,0 +1,17 @@
+                                                                           ┌──(root㉿kali)-[/home/kali/Desktop/picoCTF]
+└─# gunzip disko-1.dd.gz
+
+
+┌──(root㉿kali)-[/home/kali/Desktop/picoCTF]
+└─# ls
+disko-1.dd                                                                                                                                                                                                                           
+┌──(root㉿kali)-[/home/kali/Desktop/picoCTF]
+└─# file disko-1.dd
+disko-1.dd: DOS/MBR boot sector, code offset 0x58+2, OEM-ID "mkfs.fat", Media descriptor 0xf8, sectors/track 32, heads 8, sectors 102400 (volumes > 32 MB), FAT (32 bit), sectors/FAT 788, serial number 0x241a4420, unlabeled
+                                                                                                                                                       
+┌──(root㉿kali)-[/home/kali/Desktop/picoCTF]
+└─# strings disko-1.dd | less                       
+                                                                               
+┌──(root㉿kali)-[/home/kali/Desktop/picoCTF]
+└─# strings disko-1.dd | grep -i picoCTF
+picoCTF{1t5_ju5t_4_5tr1n9_be6031da}

@@ -1,0 +1,7 @@
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Codebook]
+└─$ ls
+codebook.txt  code.py
+                                                                                                                                                                                                                                            
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Codebook]
+└─$ python3 code.py     
+picoCTF{c0d3b00k_455157_d9aa2df2}

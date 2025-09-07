@@ -1,0 +1,20 @@
+Go to https://www.md5hashgenerator.com/ and generate hashes of given text on one click.
+
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/HashingJobApp]
+└─$ nc saturn.picoctf.net 53122
+Please md5 hash the text between quotes, excluding the quotes: 'Jodie Foster'
+Answer: 
+1d577d3a6549dc83e9d351a1255cd7b4
+1d577d3a6549dc83e9d351a1255cd7b4
+Correct.
+Please md5 hash the text between quotes, excluding the quotes: 'bull fight'
+Answer: 
+87cc16b261803de4f24debfd23119443
+87cc16b261803de4f24debfd23119443
+Correct.
+Please md5 hash the text between quotes, excluding the quotes: 'construction workers'
+Answer: 
+00ae932c1c12ee89427c3efeeecf9533
+00ae932c1c12ee89427c3efeeecf9533
+Correct.
+picoCTF{4ppl1c4710n_r3c31v3d_674c1de2}

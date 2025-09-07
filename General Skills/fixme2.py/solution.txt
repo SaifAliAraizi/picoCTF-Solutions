@@ -1,0 +1,17 @@
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/fixme2.py]
+└─$ ls
+fixme2.py
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/fixme2.py]
+└─$ python3 fixme2.py
+  File "/home/kali/Desktop/picoCTF/General Skills/fixme2.py/fixme2.py", line 22
+    if flag = "":
+       ^^^^^^^^^
+SyntaxError: invalid syntax. Maybe you meant '==' or ':=' instead of '='?
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/fixme2.py]
+└─$ mousepad fixme2.py   
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/fixme2.py]
+└─$ python3 fixme2.py 
+That is correct! Here's your flag: picoCTF{3qu4l1ty_n0t_4551gnm3nt_4863e11b}

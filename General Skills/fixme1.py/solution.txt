@@ -1,0 +1,12 @@
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/fixme1.py]
+└─$ python3 fixme1.py 
+  File "/home/kali/Desktop/picoCTF/General Skills/fixme1.py/fixme1.py", line 20
+    print('That is correct! Heres your flag: ' + flag)
+IndentationError: unexpected indent
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/fixme1.py]
+└─$ mousepad fixme1.py
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/fixme1.py]
+└─$ python3 fixme1.py 
+That is correct! Here's your flag: picoCTF{1nd3nt1ty_cr1515_182342f7}

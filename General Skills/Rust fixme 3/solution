@@ -1,0 +1,22 @@
+┌──(kali㉿kali)-[~/…/picoCTF/Rust fixme 3/fixme3/src]
+└─$ cargo run     
+    Updating crates.io index
+  Downloaded either v1.13.0
+  Downloaded xor_cryptor v1.2.3
+  Downloaded crossbeam-utils v0.8.20
+  Downloaded rayon-core v1.12.1
+  Downloaded crossbeam-epoch v0.9.18
+  Downloaded crossbeam-deque v0.8.5
+  Downloaded rayon v1.10.0
+  Downloaded 7 crates (388.2 KB) in 1.97s
+   Compiling crossbeam-utils v0.8.20
+   Compiling rayon-core v1.12.1
+   Compiling either v1.13.0
+   Compiling crossbeam-epoch v0.9.18
+   Compiling crossbeam-deque v0.8.5
+   Compiling rayon v1.10.0
+   Compiling xor_cryptor v1.2.3
+   Compiling rust_proj v0.1.0 (/home/kali/Desktop/picoCTF/Rust fixme 3/fixme3)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 8.74s
+     Running `/home/kali/Desktop/picoCTF/Rust fixme 3/fixme3/target/debug/rust_proj`
+Using memory unsafe languages is a: PARTY FOUL! Here is your flag: picoCTF{n0w_y0uv3_f1x3d_1h3m_411}

@@ -1,0 +1,9 @@
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Python Wrangling]
+└─$ ls 
+ende.py  flag.txt.en  pw.txt
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Python Wrangling]
+└─$ python3 ende.py -d flag.txt.en < pw.txt
+
+Please enter the password:picoCTF{4p0110_1n_7h3_h0us3_6008014f}

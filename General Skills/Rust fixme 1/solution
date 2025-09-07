@@ -1,0 +1,38 @@
+┌──(kali㉿kali)-[~/Desktop/picoCTF/Rust fixme 1]
+└─$ tar -xzvf fixme1.tar.gz
+
+fixme1/
+fixme1/Cargo.toml
+fixme1/Cargo.lock
+fixme1/src/
+fixme1/src/main.rs
+
+┌──(kali㉿kali)-[~/…/picoCTF/Rust fixme 1/fixme1/src]
+└─$ mousepad main.rs
+                                                                             ✅ 1. How to return early in Rust (like ret; in your code)?
+In Rust, to return early from main() (or any function returning ()), you just use:
+
+return;
+So replace:
+return;
+✅ 2. How to properly use println! with variables?
+In Rust, to print a variable with println!, use formatting specifiers like {}.
+
+Replace:
+
+println!(
+    ":?",
+    String::from_utf8_lossy(&decrypted_buffer)
+);
+with:
+
+println!(
+    "{}",
+    String::from_utf8_lossy(&decrypted_buffer)
+);                                                                                                                                             
+┌──(kali㉿kali)-[~/…/picoCTF/Rust fixme 1/fixme1/src]
+└─$ cargo run       
+   Compiling rust_proj v0.1.0 (/home/kali/Desktop/picoCTF/Rust fixme 1/fixme1)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.71s
+     Running `/home/kali/Desktop/picoCTF/Rust fixme 1/fixme1/target/debug/rust_proj`
+picoCTF{4r3_y0u_4_ru$t4c30n_n0w?}

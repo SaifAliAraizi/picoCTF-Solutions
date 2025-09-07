@@ -1,0 +1,32 @@
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Blame Game]
+└─$ ls
+challenge.zip  drop-in
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/Blame Game]
+└─$ cd drop-in
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/…/picoCTF/General Skills/Blame Game/drop-in]
+└─$ ls
+message.py
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/…/picoCTF/General Skills/Blame Game/drop-in]
+└─$ mousepad message.py       
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/…/picoCTF/General Skills/Blame Game/drop-in]
+└─$ python3 message.py                         
+Hello, World!
+                                                                                                                                                                                                                                           
+┌──(kali㉿kali)-[~/…/picoCTF/General Skills/Blame Game/drop-in]
+└─$ git log message.py     
+commit 0fe87f16cbd8129ed5f7cf2f6a06af6688665728
+Author: picoCTF{@sk_th3_1nt3rn_ea346835} <ops@picoctf.com>
+Date:   Sat Mar 9 21:09:25 2024 +0000
+
+    optimize file size of prod code
+
+commit 7e8a2415b6cca7d0d0002ff0293dd384b5cc900d
+Author: picoCTF <ops@picoctf.com>
+Date:   Sat Mar 9 21:09:25 2024 +0000
+
+    create top secret project

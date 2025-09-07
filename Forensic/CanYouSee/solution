@@ -1,0 +1,16 @@
+first unzip the the file.
+after that you will get an image.
+
+go to https://www.aware-online.com/en/osint-tools/photo-and-video-tools/
+
+after that go to Forensically https://fotoforensics.com/
+
+upload the image and check metadata 
+
+copy the cyphertext from Attribution URL: cGljb0NURntNRTc0RDQ3QV9ISUREM05fNGRhYmRkY2J9Cg==
+
+then go to https://gchq.github.io/CyberChef/
+
+paste the encrypted text apply Base64 you will get the flag
+
+picoCTF{ME74D47A_HIDD3N_4dabddcb}

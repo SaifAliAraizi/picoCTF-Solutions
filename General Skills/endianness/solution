@@ -1,0 +1,59 @@
+┌──(kali㉿kali)-[~/Desktop/picoCTF/General Skills/endianness]
+└─$ nc titan.picoctf.net 59076
+Welcome to the Endian CTF!
+You need to find both the little endian and big endian representations of a word.
+If you get both correct, you will receive the flag.
+Word: qqwtb
+Enter the Little Endian representation: 6274777171
+Correct Little Endian representation!
+Enter the Big Endian representation: 7171777462
+Correct Big Endian representation!
+Congratulations! You found both endian representations correctly!
+Your Flag is: picoCTF{3ndi4n_sw4p_su33ess_cfe38ef0}
+
+
+This challenge is based of hex conversions and endian forms . SO what is an endian ?
+In computing, endianness is the order in which bytes within a word of digital data are transmitted over a data communication medium or addressed (by rising addresses) in computer memory, counting only byte significance compared to earliness. Endianness is primarily expressed as big-endian (BE) or little-endian (LE)
+
+
+-CHALLENGE DESCRIPTION
+This is a challenge that we are working with . First lets launch the instance and see how things work here
+
+challenge
+So we are asked to find the endian form of the given word . To find the little and big endian we need to first reverse this string and then convert it into HEX form . To do this lets use one of the great tool that is CYBERCHEF
+
+cyberchef
+From the above operations we need to add two operations that are :
+1 → Reverse
+2 → To HEX
+3 → In the HEX tool choose the Delimiter as none
+
+Press enter or click to view image in full size
+
+This gives me the little endian format
+The little endian format for my string qqwtb is 6274777171
+
+Now to convert this into Big endian we just need to reverse the HEX format
+SO , Reversing the Little endian gives us the Big endian format
+
+6274777171 — — -> 7171777462
+
+7171777462 — → This reversed string is our big endian . Giving this input in the terminal gives our flag
+
+Big Enddian Calculation:
+
+Your input:
+6274777171
+
+Convert to Big Endian:
+Split into bytes:
+62 74 77 71 71
+
+Reverse:
+71 71 77 74 62
+
+Join back:
+7171777462
+
+✅ Big Endian String (hex): 7171777462
+
